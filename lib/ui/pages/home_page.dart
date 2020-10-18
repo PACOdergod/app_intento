@@ -1,48 +1,13 @@
+import 'package:app_intento/ui/pages/lista_contactos._page.dart';
 import 'package:app_intento/ui/widgets/custom_buttons.dart';
 import 'package:app_intento/ui/widgets/custom_listtile.dart';
 import 'package:flutter/material.dart';
 import 'package:app_intento/models/person_model.dart';
 
-List<PersonModel> persons = [
-  persona1,
-  persona2,
-  persona3,
-  persona1,
-  persona2,
-  persona3,
-  persona1,
-  persona2,
-  persona3
-];
-
 GlobalKey<ScaffoldState> homeKey = GlobalKey<ScaffoldState>();
 
 List<Widget> pages = [
-  Container(
-    child: Column(
-      children: [
-        //Este es el boton de agregar contacto
-        CustomButton(),
-
-        //Este es el list view para la lista de contactos:
-        Expanded(
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: [
-              for (int i = 0; i < persons.length; i++)
-                Dismissible(
-                    background: Container(
-                      color: Colors.red,
-                    ),
-                    onDismissed: (direction) => persons.remove(i),
-                    key: Key(i.toString()),
-                    child: CustomListTile(persons[i]))
-            ],
-          ),
-        ),
-      ],
-    ),
-  ),
+  ListaContactosPage(),
   Container(
     color: Colors.blue,
   )

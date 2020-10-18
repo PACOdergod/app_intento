@@ -11,7 +11,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
         onTap: () {
-          titulo.value = 'Value notifier';
+          //titulo.value = 'Value notifier';
 
           //_controller.changeTheme(true);
           /*
@@ -19,7 +19,7 @@ class CustomButton extends StatelessWidget {
           return FormContactPage();
         }));*/
 
-          //Navigator.pushNamed(context, 'form_contacto');
+          Navigator.pushNamed(context, 'form_contacto');
         },
 
         //Diseño del boton:
