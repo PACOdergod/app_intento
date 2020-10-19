@@ -1,11 +1,14 @@
-import 'package:app_intento/controllers/theme_controller.dart';
-import 'package:app_intento/ui/pages/form_contact_page.dart';
-import 'package:app_intento/ui/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomButton extends StatefulWidget {
+  @override
+  _CustomButtonState createState() => _CustomButtonState();
+}
+
+class _CustomButtonState extends State<CustomButton> {
   ValueNotifier<String> titulo = ValueNotifier<String>('Agregar contacto');
-  ThemeController _controller = ThemeController.instacia;
+
+  //ThemeController _controller = ThemeController.instacia;
 
   @override
   Widget build(BuildContext context) {

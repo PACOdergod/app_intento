@@ -1,10 +1,14 @@
 import 'package:app_intento/controllers/lista_contactos_controller.dart';
-import 'package:app_intento/models/person_model.dart';
 import 'package:app_intento/ui/widgets/custom_buttons.dart';
 import 'package:app_intento/ui/widgets/custom_listtile.dart';
 import 'package:flutter/material.dart';
 
-class ListaContactosPage extends StatelessWidget {
+class ListaContactosPage extends StatefulWidget {
+  @override
+  _ListaContactosPageState createState() => _ListaContactosPageState();
+}
+
+class _ListaContactosPageState extends State<ListaContactosPage> {
   ListaContactosController controller = ListaContactosController.instacia;
 
   @override

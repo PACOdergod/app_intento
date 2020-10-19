@@ -1,4 +1,3 @@
-import 'package:app_intento/main.dart';
 import 'package:app_intento/models/person_model.dart';
 import 'package:app_intento/ui/pages/detalles_contacto_page.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +22,9 @@ class CustomListTile extends StatelessWidget {
               arguments: DetallesContactoPageArguments(
                   persona: _persona, contenido: 'contenido'));
         },
-        leading: Icon(_persona.iconIzquierda),
+        leading: CircleAvatar(
+          child: Text(_persona.nombre[0].toUpperCase()),
+        ),
         trailing: SizedBox(
           width: 60,
           child: Row(

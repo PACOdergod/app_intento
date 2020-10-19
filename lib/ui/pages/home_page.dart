@@ -1,8 +1,5 @@
 import 'package:app_intento/ui/pages/lista_contactos._page.dart';
-import 'package:app_intento/ui/widgets/custom_buttons.dart';
-import 'package:app_intento/ui/widgets/custom_listtile.dart';
 import 'package:flutter/material.dart';
-import 'package:app_intento/models/person_model.dart';
 
 GlobalKey<ScaffoldState> homeKey = GlobalKey<ScaffoldState>();
 

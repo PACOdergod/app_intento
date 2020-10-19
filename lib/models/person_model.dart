@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 
 class PersonModel {
-  final IconData iconIzquierda;
-  final IconData iconDerecha;
-  final String nombre;
-  final String descripcion;
+  IconData iconIzquierda;
+  IconData iconDerecha;
+  String nombre;
+  String descripcion;
+  String telefono;
 
   PersonModel(
-      {this.iconIzquierda, this.iconDerecha, this.nombre, this.descripcion});
+      {this.iconIzquierda,
+      this.iconDerecha,
+      this.nombre,
+      this.descripcion,
+      this.telefono});
 }
 
 PersonModel persona1 = PersonModel(
