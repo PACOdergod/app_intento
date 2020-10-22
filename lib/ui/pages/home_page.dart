@@ -1,13 +1,13 @@
 import 'package:app_intento/ui/pages/lista_contactos._page.dart';
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'informacion_usuario_page.dart';
 
 GlobalKey<ScaffoldState> homeKey = GlobalKey<ScaffoldState>();
 
 List<Widget> pages = [
   ListaContactosPage(),
-  Container(
-    color: Colors.blue,
-  )
+  InformacionUsuarioPage(),
 ];
 
 class HomePage extends StatefulWidget {
@@ -38,7 +38,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               ListTile(
-                title: Text('inicio'),
+                leading: Icon(MdiIcons.homeCircle),
+                title: Text('Inicio'),
                 onTap: () {
                   //Esto es para cerrar el drawer
                   //cuando se haya picado un boton
@@ -50,7 +51,8 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
               ListTile(
-                title: Text('segunda pantalla'),
+                leading: Icon(MdiIcons.accountBox),
+                title: Text('Usuario'),
                 onTap: () {
                   Navigator.pop(context);
                   setState(() {
@@ -75,9 +77,18 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text('material app'),
           actions: [
-            //IconButton(icon: Icon(Icons.access_alarm), onPressed: null),
-            IconButton(icon: Icon(Icons.account_balance), onPressed: null),
-            IconButton(icon: Icon(Icons.ac_unit), onPressed: null)
+            picker == 1
+                ? IconButton(
+                    icon: Icon(Icons.account_balance),
+                    onPressed: () {
+                      print('se preciono el boton');
+                      print('se inicio la descarga');
+                      Future.delayed(Duration(seconds: 2), () {
+                        print('se descargo la imagen');
+                      });
+                    })
+                : SizedBox(),
+            //IconButton(icon: Icon(Icons.ac_unit), onPressed: null)
           ],
         ),
         body: pages[picker]);

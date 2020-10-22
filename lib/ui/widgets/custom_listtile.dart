@@ -26,13 +26,13 @@ class CustomListTile extends StatelessWidget {
           child: Text(_persona.nombre[0].toUpperCase()),
         ),
         trailing: SizedBox(
-          width: 60,
+          width: 100,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Icon(_persona.iconDerecha),
-              SizedBox(width: 5),
-              Icon(Icons.accessible_forward)
+              IconButton(icon: Icon(_persona.iconDerecha), onPressed: () {}),
+              //SizedBox(width: 5),
+              IconButton(icon: Icon(Icons.accessible_forward), onPressed: () {})
             ],
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomButton extends StatefulWidget {
   @override
@@ -40,7 +41,7 @@ class _CustomButtonState extends State<CustomButton> {
               child: Center(
                   child: Text(
                 value,
-                style: TextStyle(
+                style: GoogleFonts.lemonada(
                     color: Theme.of(context).primaryColor, fontSize: 20),
               )),
             );

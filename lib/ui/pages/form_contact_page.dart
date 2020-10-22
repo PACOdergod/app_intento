@@ -37,8 +37,8 @@ class _FormContactPageState extends State<FormContactPage> {
     }
   }
 
-  String validate(String value, String key) =>
-      value.isEmpty ? 'Escriba su ${key}' : null;
+  String validate(String value, String llave) =>
+      value.isEmpty ? 'Escriba su ${llave}' : null;
 
   @override
   Widget build(BuildContext context) {
