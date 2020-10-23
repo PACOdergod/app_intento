@@ -2,6 +2,7 @@ import 'package:app_intento/controllers/theme_controller.dart';
 import 'package:app_intento/ui/pages/detalles_contacto_page.dart';
 import 'package:app_intento/ui/pages/form_contact_page.dart';
 import 'package:app_intento/ui/pages/home_page.dart';
+import 'package:app_intento/ui/pages/form_usuario_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,7 +24,8 @@ class _MyAppState extends State<MyApp> {
           return MaterialApp(
             routes: {
               'detalle_contacto': (context) => DetallesContactoPage(),
-              'form_contacto': (context) => FormContactPage()
+              'form_contacto': (context) => FormContactPage(),
+              'form_usuario': (context) => FormUsuarioPage()
             },
             title: 'flutter demo',
             theme: ThemeData(

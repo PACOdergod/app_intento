@@ -18,6 +18,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int picker;
 
+  Future<void> descargaImgagen() async {
+    print('se inicio la descarga');
+    await Future.delayed(Duration(seconds: 2), () {
+      print('se esta descargo la imagen');
+    });
+    return 'se descargo la imagen';
+  }
+
   @override
   void initState() {
     super.initState();
@@ -81,11 +89,7 @@ class _HomePageState extends State<HomePage> {
                 ? IconButton(
                     icon: Icon(Icons.account_balance),
                     onPressed: () {
-                      print('se preciono el boton');
-                      print('se inicio la descarga');
-                      Future.delayed(Duration(seconds: 2), () {
-                        print('se descargo la imagen');
-                      });
+                      Navigator.pushNamed(context, 'form_usuario');
                     })
                 : SizedBox(),
             //IconButton(icon: Icon(Icons.ac_unit), onPressed: null)

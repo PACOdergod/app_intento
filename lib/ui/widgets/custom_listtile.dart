@@ -1,6 +1,7 @@
 import 'package:app_intento/models/person_model.dart';
 import 'package:app_intento/ui/pages/detalles_contacto_page.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CustomListTile extends StatelessWidget {
   final PersonModel _persona;
@@ -30,9 +31,17 @@ class CustomListTile extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              IconButton(icon: Icon(_persona.iconDerecha), onPressed: () {}),
+              IconButton(
+                  icon: Icon(_persona.iconDerecha),
+                  onPressed: () {
+                    //launch("https://wa.me/+52${_persona.telefono}?text=$'hola'");
+                  }),
               //SizedBox(width: 5),
-              IconButton(icon: Icon(Icons.accessible_forward), onPressed: () {})
+              IconButton(
+                  icon: Icon(Icons.call),
+                  onPressed: () {
+                    launch('tel:%{person.telefono}');
+                  })
             ],
           ),
         ),

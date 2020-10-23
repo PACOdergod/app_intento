@@ -19,16 +19,19 @@ PersonModel persona1 = PersonModel(
     nombre: 'paco',
     descripcion: 'programador flutter',
     iconDerecha: Icons.message,
-    iconIzquierda: Icons.person);
+    iconIzquierda: Icons.person,
+    telefono: '3453');
 
 PersonModel persona2 = PersonModel(
     nombre: 'admin',
     descripcion: 'master of the live',
     iconDerecha: Icons.message,
-    iconIzquierda: Icons.person);
+    iconIzquierda: Icons.person,
+    telefono: '4535');
 
 PersonModel persona3 = PersonModel(
     nombre: 'noob',
     descripcion: 'noob',
     iconDerecha: Icons.message,
-    iconIzquierda: Icons.person);
+    iconIzquierda: Icons.person,
+    telefono: '4535');
