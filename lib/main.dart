@@ -4,7 +4,6 @@ import 'package:app_intento/ui/pages/form_contact_page.dart';
 import 'package:app_intento/ui/pages/home_page.dart';
 import 'package:app_intento/ui/pages/form_usuario_page.dart';
 import 'package:flutter/material.dart';
-
 void main() {
   runApp(MyApp());
 }
